@@ -1,0 +1,119 @@
+﻿/* General styles for the login area */
+.login-area {
+    width: 50%;
+    padding: 20px;
+    margin-left:100px;
+    position:absolute;
+    margin-top:100px;
+}
+.titleee {
+    position: absolute;
+    color: limegreen;
+    font-weight: 600;
+    margin-top: -30px;
+    margin-left: 80px;
+}
+.r-area {
+    width: 50%;
+    padding: 20px;
+    margin-left: 100px;
+    position: absolute;
+    margin-top: 60px;
+}
+.titlee {
+    position: absolute;
+    color: limegreen;
+    font-weight: 600;
+    margin-top: -60px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+/* Styling for form sections */
+.login-section {
+    background-color: white;
+    border: 0px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 60%;
+    height:500px;
+    margin-left: 300px;
+    position: absolute;
+   padding-top:70px;
+}
+
+/* Labels and input field styling */
+.form-floating label {
+    color: #6c757d;
+}
+
+.form-control {
+    border-radius: 0.25rem;
+    border: 0px solid #ced4da;
+    background-color: #F6F5F2;
+    width: 320px;
+    margin-left: 50px;
+    padding-left: 30px;
+    margin-top: 30px;
+    
+}
+.form-label{
+    margin-left:50px;
+}
+/* Login button styling */
+#login-submit {
+    background-color: limegreen;
+    color: white;
+    border: 0px solid #ced4da;
+    border-radius:20px;
+    margin-left: 50px;
+    width: 320px;
+}
+
+    #login-submit:hover {
+        background-color: green;
+    }
+
+/* Link styling */
+#forgot-password,
+#resend-confirmation,
+a.asp-page-link {
+    color: green;
+    font-size: 15px;
+    margin-left:50px;
+}
+
+    #forgot-password:hover,
+    #resend-confirmation:hover,
+    a.asp-page-link:hover {
+        color: green;
+        text-decoration: underline;
+        margin-left: 50px;
+    }
+
+/* Checkbox and label alignment */
+.checkbox label {
+    display: inline-block;
+    margin-bottom: 0;
+}
+/* Additional styles specific to the register form */
+#registerSubmit {
+    background-color: limegreen; /* Maintain consistency with login button */
+    color: white;
+    border-radius: 20px;
+    width: 320px;
+    margin-left: 50px;
+}
+
+    #registerSubmit:hover {
+        background-color: green; /* Darker green on hover */
+    }
+
+#registerlink {
+    color: limegreen;
+
+}
+#registerlinkk {
+    margin-left: 70px;
+    margin-top:20px;
+}

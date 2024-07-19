@@ -1,0 +1,65 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using advancedProject.Areas.Identity.Data
+
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+<nav class="sidebar">
+    <div class="sidebar-container">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Welcome</a>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+           
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Task" asp-action="List">Users Tasks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Profile" asp-action="Index">Users Profile</a>
+            </li>
+            <li class="nav-item">
+                <a id="logoutt" class="nav-link" asp-area="Identity" asp-page="/Account/Login" asp-route-returnUrl="@Url.Page("/login")" method="post">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+@if(User.IsInRole("user")){
+    <div class="text-center">
+        <h1 class="display-4">
+            hi user
+        </h1>
+    </div>
+
+}
+@if (User.IsInRole("admin"))
+{
+    <div class="text-center">
+        <h1 class="display-4">
+            hi admin
+        </h1>
+    </div>
+
+    <div class="text-center">
+        <div class="info-boxes">
+            <div class="info-box">
+                <h2>Total Users</h2>
+                <p>@ViewData["UserCount"]</p>
+            </div>
+            <div class="info-box">
+                <h2>Total Tasks</h2>
+                <p>@ViewData["TaskCount"]</p>
+            </div>
+        </div>
+    </div>
+}

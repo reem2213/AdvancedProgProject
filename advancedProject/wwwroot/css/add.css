@@ -1,0 +1,60 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+/* General form styling */
+.form-label {
+    color: #495057; /* Dark gray */
+    font-weight: 600;
+    margin-left: 400px;
+}
+.addtitle {
+    padding-left: 400px;
+    font-size: 35px;
+}
+.editTitle {
+    padding-left: 400px;
+    color:limegreen;
+    font-size:35px;
+}
+#labelll {
+    padding-left: 200px;
+}
+.form-control, .form-select {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    width: 50%;
+    margin-left: 200px;
+}
+
+  /* Customizes the form inputs and select boxes */
+  .form-control:focus, .form-select:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+
+/* Button styling */
+.btn-primary {
+    background-color: limegreen;
+    border-color: #007bff;
+    color: white;
+    margin-left: 300px;
+}
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+
+/* Spacing between form groups */
+.mt-3 {
+  margin-top: 1rem;
+}
+.btn btn-primary{
+    margin-left:300px;
+    background-color:limegreen;
+}
+
+#logoutt {
+    margin-top: 250px;
+}

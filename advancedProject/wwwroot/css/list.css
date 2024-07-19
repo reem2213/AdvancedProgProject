@@ -1,0 +1,35 @@
+.table {
+  width: auto; /* Adjusts the width of the table to fit its content */
+  margin-left: 200px; /* Moves the table 200px to the right from its normal position */
+  border-collapse: collapse; /* Optional: Collapses the border to make it more compact */
+}
+
+th, td {
+  border: 1px solid #ddd; /* Adds a subtle border to each cell */
+  padding: 8px; /* Adds padding inside each cell for better readability */
+}
+
+th {
+    color: limegreen;
+=    text-align: left; /* Aligns text to the left */
+}
+
+tr:hover {
+  background-color: #f5f5f5; /* Adds a hover effect with a slightly darker grey */
+}
+.listing{
+  color:limegreen;
+  margin-left:200px;
+  margin-top:50px;
+}
+#editButton{
+  color:white;
+  background-color:limegreen;
+  border:0px solid;
+}
+#editButton:hover{
+  background-color:forestgreen;
+}
+#logoutt{
+  margin-top:250px;
+}

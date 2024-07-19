@@ -1,0 +1,61 @@
+﻿@model List<advancedProject.Models.Tasks>
+
+
+
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+<nav class="sidebar">
+    <div class="sidebar-container">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Welcome</a>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+           
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Task" asp-action="List">Users Tasks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Profile" asp-action="Index">Users Profile</a>
+            </li>
+            <li class="nav-item">
+                <a id="logoutt" class="nav-link" asp-area="Identity" asp-page="/Account/Login" asp-route-returnUrl="@Url.Page("/login")" method="post">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<h2 class="taskstousers">Tasks Assigned to @ViewData["UserName"]</h2>
+
+<table class="tablee">
+    <thead>
+        <tr class="tr">
+            <th class="th">Title</th>
+            <th class="th">Description</th>
+            <th class="th">Date</th>
+            <th class="th">Priority</th>
+            <th class="th">Status</th>
+            <th class="th">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model)
+        {
+            <tr class="tr">
+                <td class="td">@task.Title</td>
+                <td class="td">@task.Description</td>
+                <td class="td">@task.Date.ToString("yyyy-MM-dd")</td>
+                <td class="td">@task.Priority</td>
+                <td class="td">
+                    @task.status
+                </td>
+                <td class="td">
+                    <a asp-controller="Task" id="updatebuton" class="btn btn-primary" asp-action="UserEditTask" asp-route-id="@task.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+    
+ 

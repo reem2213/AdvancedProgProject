@@ -1,0 +1,22 @@
+.profileDetails{
+  margin-left:400px;
+  margin-top:100px;
+}
+.edittask {
+    color: limegreen;
+    margin-left: 300px;
+    margin-top: 50px;
+}
+
+.formedit {
+    margin-left: 300px;
+    margin-top:50px;
+}
+
+#updatebuton {
+    background-color: limegreen;
+
+}
+.form-control {
+    width: 50%;
+}

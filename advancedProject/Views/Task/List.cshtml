@@ -1,0 +1,73 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<advancedProject.Models.Tasks>
+
+<link rel="stylesheet" href="~/css/list.css" asp-append-version="true" />
+
+<nav class="sidebar">
+    <div class="sidebar-container">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Welcome</a>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+           
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Task" asp-action="List">Users Tasks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Profile" asp-action="Index">Users Profile</a>
+            </li>
+             <li class="nav-item">
+                <a id="logoutt" class="nav-link" asp-area="Identity" asp-page="/Account/Login" asp-route-returnUrl="@Url.Page("/login")" method="post">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<h1 class="listing">List Tasks</h1>
+
+<table class="table">
+
+    <thead>
+
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>User</th>
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var t in Model)
+        {
+            <tr>
+
+                <td>@t.Id</td>
+                <td>@t.Title</td>
+                <td>@t.Description</td>
+                <td>@t.Date.ToString("yyyy-MM-dd")</td>
+                <td>@t.Priority</td>
+                <td>@t.status</td>
+                <td>@t.User.UserName</td>
+
+
+                <td>
+                    <a class="btn btn-primary" id="editButton" asp-controller="Task" asp-action="Edit" asp-route-id="@t.Id">Edit</a>
+                </td>
+
+
+
+
+            </tr>
+        }
+    </tbody>
+</table>
